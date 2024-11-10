@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dandadan - Manga Web</title>
+  <link href="src/styles.css" rel="stylesheet">
+  <link href="dist/styles.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Header -->
+  <header class="bg-black p-4 flex justify-between items-center">
+    <div class="text-lg font-bold">LOGO</div>
+    
+    <!-- Botón de menú (visible solo en pantallas pequeñas) -->
+    <button id="menu-toggle" class="text-gray-400 hover:text-white md:hidden">
+      <!-- Ícono de hamburguesa -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    
+    <!-- Navegación (visible en pantallas medianas y grandes) -->
+    <nav class="hidden md:flex md:flex-row gap-4 md:items-center">
+      <a href="#" class="text-gray-400 hover:text-white">Sinopsis</a>
+      <a href="#" class="text-gray-400 hover:text-white">Manga</a>
+      <a href="#" class="text-gray-400 hover:text-white">Wallpapers</a>
+      <a href="#" class="text-gray-400 hover:text-white">Contacto</a>
+    </nav>
+    
+    <!-- Botones de autenticación (visible en pantallas medianas y grandes) -->
+    <div class="hidden md:flex gap-2">
+      <button class="bg-red-500 text-white px-4 py-2 rounded">Sign in</button>
+      <button class="bg-gray-500 text-white px-4 py-2 rounded">Register</button>
+    </div>
+  </header>
+
+  <!-- Menú deslizable desde el lado derecho -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black text-white transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-start p-6 gap-4">
+    <button id="close-menu" class="self-end text-gray-400 hover:text-white">
+      <!-- Ícono de cerrar -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <a href="#" class="text-gray-400 hover:text-white">Sinopsis</a>
+    <a href="#" class="text-gray-400 hover:text-white">Manga</a>
+    <a href="#" class="text-gray-400 hover:text-white">Wallpapers</a>
+    <a href="#" class="text-gray-400 hover:text-white">Contacto</a>
+  </div>
+
+  <!-- Intro Section -->
+  <section
+    class="p-10 text-center bg-cover bg-center"
+    style="background-image: url('/public/images/Dandadan_PageHeader.jpeg');
+    background-color: rgba(0, 0, 0, 0.5); background-blend-mode: multiply;"
+  >
+  <h1 class="text-4xl font-bold text-white">Dandadan</h1>
+  <p class="mt-2 text-xl text-white">¡Comienza una historia adolescente terrorífica con la Turbo Abuela!</p>
+  <button onclick="window.open('https://mangaplus.shueisha.co.jp/titles/200084', '_blank')" class="mt-4 bg-white text-black px-6 py-2 rounded">Leer ahora</button>
+  </section>
+
+  <!-- Sinopsis Section -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-4">Sinopsis</h2>
+    <p class="text-gray-300">
+      Takkakura es un joven amante de lo oculto que no cree en fantasmas, mientras que su amiga, Ayase, no cree en los alienígenas. Ambos se toparán con un misterio que desafiará todas sus creencias y conocimientos. ¡Comienza su historia adolescente terrorífica!
+    </p>
+  </section>
+
+  <!-- Manga Section -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-4">Manga</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Tomo 1 -->
+      <div class="bg-gray-800 p-4 rounded">
+        <img src="/public/images/Dandadan_Web-1.jpg" alt="Tomo 1" class="mb-4 rounded">
+        <h3 class="text-xl font-semibold">Tomo 1</h3>
+        <p class="text-gray-400 mt-2">Momo Ayase strikes up an unusual friendship...</p>
+        <button onclick="window.open('https://tiendapanini.com.mx/dandadan-n1', '_blank')" class="mt-4 bg-red-500 px-4 py-2 rounded">Comprar</button>
+      </div>
+      <!-- Tomo 2 -->
+      <div class="bg-gray-800 p-4 rounded">
+        <img src="/public/images/DanDaDan_Web-2.jpg" alt="Tomo 2" class="mb-4 rounded">
+        <h3 class="text-xl font-semibold">Tomo 2</h3>
+        <p class="text-gray-400 mt-2">Okarun, a high school boy obsessed...</p>
+        <button onclick="window.open('https://tiendapanini.com.mx/dandadan-n2', '_blank')" class="mt-4 bg-red-500 px-4 py-2 rounded">Comprar</button>
+      </div>
+      <!-- Tomo 3 -->
+      <div class="bg-gray-800 p-4 rounded">
+        <img src="/public/images/Dandadan_Web-3.jpg" alt="Tomo 3" class="mb-4 rounded">
+        <h3 class="text-xl font-semibold">Tomo 3</h3>
+        <p class="text-gray-400 mt-2">Okarun, a high school boy obsessed...</p>
+        <button onclick="window.open('https://tiendapanini.com.mx/dandadan-n3', '_blank')" class="mt-4 bg-red-500 px-4 py-2 rounded" action>Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="p-10 bg-gray-800">
+    <h2 class="text-3xl font-bold mb-4">Latest Reviews</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Review Template -->
+      <div class="bg-gray-700 p-4 rounded">
+        <p class="text-gray-400">Review title</p>
+        <p class="text-gray-500 mt-2">Review body</p>
+        <p class="text-gray-500 mt-2">Reviewer name</p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded">
+        <p class="text-gray-400">Review title</p>
+        <p class="text-gray-500 mt-2">Review body</p>
+        <p class="text-gray-500 mt-2">Reviewer name</p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded">
+        <p class="text-gray-400">Review title</p>
+        <p class="text-gray-500 mt-2">Review body</p>
+        <p class="text-gray-500 mt-2">Reviewer name</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wallpapers Section -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-4">Wallpapers</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="/public/images/wallpaper-1.jpg" alt="Wallpaper 1" class="rounded">
+      <img src="/public/images/wallpaper-2.jpg" alt="Wallpaper 2" class="rounded">
+      <img src="/public/images/wallpaper-3.jpg" alt="Wallpaper 3" class="rounded">
+      <img src="/public/images/wallpaper-4.jpg" alt="Wallpaper 4" class="rounded">
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="bg-black py-16 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center">
+      
+      <!-- Imagen -->
+      <div class="md:w-1/4 w-2/3 mx-auto md:mx-0">
+        <img src="/public/images/about-us.jpg" alt="Imagen de About Us" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      
+      <!-- Texto -->
+      <div class="md:w-1/2 md:pl-10 mt-8 md:mt-0 text-center md:text-left">
+        <h2 class="text-3xl font-bold text-white mb-4">Sobre Mí</h2>
+        <p class="text-gray-300 mb-4">
+          Soy Kermit, una persona profundamente interesada en el mundo del arte, especialmente en las artes plásticas, la pintura y el dibujo. Disfruto sumergirme en la historia y la creatividad de los museos, donde encuentro inspiración y nuevas perspectivas. Además, la música es una de mis grandes pasiones, siempre estoy buscando nuevas melodías que me conecten con diferentes emociones.
+        </p>
+        <p class="text-gray-300">
+          La naturaleza es otro de mis amores, me encanta pasar tiempo al aire libre, explorando paisajes y respirando aire fresco. El climbing y el cycling son mis deportes favoritos, ya que me permiten desafiarme físicamente, disfrutar de la tranquilidad de la montaña y, al mismo tiempo, mantenerme en contacto con la naturaleza.
+        </p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 p-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="font-bold text-lg text-white">Explore</h3>
+        <ul class="text-gray-400 mt-2">
+          <li>Design</li>
+          <li>Prototyping</li>
+          <li>Development features</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg text-white">Resources</h3>
+        <ul class="text-gray-400 mt-2">
+          <li>Blog</li>
+          <li>Best practices</li>
+          <li>Color wheel</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg text-white">Follow the latest trends</h3>
+        <form class="mt-2">
+          <input type="email" placeholder="you@example.com" class="p-2 rounded text-black w-full md:w-auto">
+          <button class="bg-red-500 text-white px-4 py-2 rounded mt-2 md:mt-0">Submit</button>
+        </form>
+
+        <!-- Envoltorio para el iframe -->
+        <div class="mt-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d362.54040098675824!2d-104.88246024057176!3d21.49270069240905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842737639597f1ff%3A0xafc44621a3931014!2sTienda%20Panini%20Tepic!5e0!3m2!1ses!2smx!4v1731274238420!5m2!1ses!2smx"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para alternar el menú hamburguesa -->
+  <script src="/src/js/menu.js"></script>
+  <script src="/src/js/main.js"></script>
+</body>
+</html>
